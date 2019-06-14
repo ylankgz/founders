@@ -689,7 +689,7 @@ body,
 }
 
 /* Box Shadow */
-.box-shadow, .offcanvas-wrapper.active, .single-blog-item, .single-blog-style--two:hover .border-hover, #countdown li .single-countdown, .single-feature, .single-process, .single-service, .single-service.style--three:hover, .pricing-navtab .nav-tabs .nav-link, .pricing-navtab .tab-content .tab-pane, .single-project-item, .single-team-member .team-info .info-front,
+.box-shadow, .offcanvas-wrapper.active, .single-blog-item, .single-blog-style--two:hover .border-hover, #countdown li .single-countdown, .single-feature, .single-process, .single-service.style--three:hover, .pricing-navtab .nav-tabs .nav-link, .pricing-navtab .tab-content .tab-pane, .single-project-item, .single-team-member .team-info .info-front,
 .single-team-member .team-info .info-back {
   -webkit-box-shadow: 0 5px 40px rgba(0, 0, 0, 0.05);
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.05);
@@ -2881,6 +2881,12 @@ blockquote {
   padding: 50px 20px;
   background-color: #ffffff;
   margin-bottom: 30px;
+}
+
+/* Box Shadow */
+.single-service {
+  -webkit-box-shadow: 0 5px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.1);
 }
 
 .single-service .icon {
