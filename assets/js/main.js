@@ -93,6 +93,26 @@ We may release future updates so it will overwrite this file. it's better and sa
     };
 
     /*==================================
+    15: Form
+    ====================================*/
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbynQVQJR2jEGDwv6SuI8yvXK_0xMeuXwDPs2GELpdkeGGRabt8f/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                $('#form-btn-text').text("Отправлено");
+                $('#form-btn').prop("disabled", true);
+                $('#form-resp').text("Спасибо! Ваше сообщение отправлено :)")
+            })
+            .catch(error => {
+                $('#form-resp').text(error.message)
+            })
+    })
+
+    /*==================================
     06: Owl Carousel
     ====================================*/
     var $owlCarousel = $('.owl-carousel');
@@ -410,20 +430,6 @@ We may release future updates so it will overwrite this file. it's better and sa
             $('.grid').isotope({
                 filter: filterValue
             });
-        });
-    });
-
-    /*==================================
-    13: Contact Form
-    ====================================*/
-    $('.contact-form-wrapper').on('submit', 'form', function (e) {
-        e.preventDefault();
-
-        var $el = $(this);
-
-        $.post($el.attr('action'), $el.serialize(), function (res) {
-            res = $.parseJSON(res);
-            $el.parent('.contact-form-wrapper').find('.form-response').html('<span>' + res[1] + '</span>');
         });
     });
 

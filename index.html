@@ -69,9 +69,6 @@
                         <!-- Main Menu Begin -->
                         <div class="main-menu d-flex align-items-center justify-content-end">
                             <ul class="nav align-items-center">
-                                <li class="current-menu-parent" >
-                                    <a href="/">Home</a>
-                                </li>
                                 <li>
                                     <a href="#topics">Топики</a>
                                 </li>
@@ -917,8 +914,8 @@
                                 </div>
                                 <div class="media-body">
                                     <h4>Адрес</h4>
-                                    <p>Ибраимова 103,
-                                        Бишкек, Кыргызская Республика</p>
+                                    <a href="https://go.2gis.com/g9md5" target="_blank ">Ибраимова 103,
+                                        Бишкек, Кыргызская Республика</a>
                                 </div>
                             </div>
                             <!-- End Single Contact Info -->
@@ -942,7 +939,7 @@
                                 </div>
                                 <div class="media-body">
                                     <h4>Email</h4>
-                                    <p><a href="#">bizidea@info.com</a></p>
+                                    <p><a href="mailto:founderskg@gmail.com">founderskg@gmail.com</a></p>
                                 </div>
                             </div>
                             <!-- End Single Contact Info -->
@@ -957,7 +954,7 @@
                     <div class="contact-form-wrapper">
                         <h3>Напишите нам</h3>
                         <br>
-                        <form method="POST" action="sendmail.php" class="contact-form">
+                        <form name="submit-to-google-sheet" class="contact-form">
                             <div class="row">
                                 <div class="col-md-6">
                                     <input type="text" name="name" class="theme-input-style" placeholder="Ваше имя" required>
@@ -973,14 +970,16 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <textarea name="Сообщение" class="theme-input-style" required></textarea>
+                                    <textarea name="message" class="theme-input-style" placeholder="Сообщение" required></textarea>
                                 </div>
 
                                 <div class="col-12">
-                                    <button type="submit" class="btn"><span>Отправить</span></button>
+                                    <button type="submit" class="btn" id="form-btn"><span id="form-btn-text">Отправить</span></button>
                                 </div>
                             </div>
-                            <div class="form-response"></div>
+                            <div class="form-response text-center mt-2">
+                                <p id="form-resp"></p>
+                            </div>
                         </form>
                     </div>
                     <!-- Contact Form End -->
@@ -1014,18 +1013,17 @@
                             <!-- Widget Content Begin -->
                             <div class="info-content">
                                 <div class="single-info">
-                                    <span>Office Location</span>
-                                    <p>173 Collins Street West victoria, Melbourne, Australia</p>
+                                    <span>Адрес офиса</span>
+                                    <a href="https://go.2gis.com/g9md5" target="_blank">Ибраимова 103, Бишкек, Кыргызская Республика</a>
                                 </div>
                                 <div class="single-info">
-                                    <span>Business Phone</span>
-                                    <p><a href="#">+0096665431</a><a href="#">+0096667331</a></p>
+                                    <span>Телефон</span>
+                                    <p><a href="tel:+996703666656">0 703 666 656</a></p>
                                 </div>
                                 <div class="single-info">
-                                    <span>Support mail</span>
+                                    <span>Email</span>
                                     <p>
-                                        <a href="#">bizidea@info.com</a> 
-                                        <a href="#">bizidea@gmail.com</a>
+                                        <a href="mailto:founderskg@gmail.com">founderskg@gmail.com</a>
                                     </p>
                                 </div>
                             </div>
@@ -1033,79 +1031,43 @@
                         </div>
                         <!-- About Widget End -->
                     </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <!-- Widget Recent Post Begin -->
-                        <div class="widget widget_recent_entries">
-                            <!-- Widget Title Begin  -->
-                            <div class="widget-title">
-                                <h4>Recent Posts</h4>
-                            </div>
-                            <!-- Widget Title End  -->
-
-                            <!-- Single Latest Post Begin -->
-                            <div class="single-post media">
-                                <div class="post-image">
-                                    <img src="assets/img/blog/recent-post.png" data-rjs="2" alt="">
-                                </div>
-                                <div class="post-content media-body">
-                                    <span class="posted-on">18 Feb, 2019</span>
-                                    <h5><a href="#">Funds in Institutional Portfolios</a></h5>
-                                </div>
-                            </div>
-                            <!-- Single Latest Post End -->
-
-                            <!-- Single Latest Post Begin -->
-                            <div class="single-post media">
-                                <div class="post-image">
-                                    <img src="assets/img/blog/recent-post.png" data-rjs="2" alt="">
-                                </div>
-                                <div class="post-content media-body">
-                                    <span class="posted-on">18 Feb, 2019</span>
-                                    <h5><a href="#">Funds in Institutional Portfolios</a></h5>
-                                </div>
-                            </div>
-                            <!-- Single Latest Post End -->
-                        </div>
-                        <!-- Widget Recent Post End -->
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
+                    <div class="col-lg-3 col-sm-6 offset-lg-1">
                         <!-- Widget Quick Nav -->
                         <div class="widget widget_nav_menu">
                             <!-- Widget Title Begin  -->
                             <div class="widget-title">
-                                <h4>Quick Links</h4>
+                                <h4>Карта сайта</h4>
                             </div>
                             <!-- Widget Title End  -->
 
                             <!-- Menu Begin -->
                             <ul class="menu">
-                                <li><a href="#">About Company</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Our Experts</a></li>
-                                <li><a href="#">Get Constultation</a></li>
-                                <li><a href="#">Terms & Condition</a></li>
-                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="/">Главная</a></li>
+                                <li><a href="#topics">Топики</a></li>
+                                <li><a href="#map">Карта</a></li>
+                                <li><a href="#program">Программа</a></li>
+                                <li><a href="#about">О нас</a></li>
+                                <li><a href="#contact">Контакты</a></li>
                             </ul>
                             <!-- Menu End -->
                         </div>
                         <!-- Widget Quick Nav -->
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-4 col-sm-6 offset-lg-1">
                         <!-- Widget Newsletter Begin -->
                         <div class="widget widget_newsletter">
                             <!-- Widget Title Begin  -->
                             <div class="widget-title">
-                                <h4>Newsletter</h4>
+                                <h4>Рассылка</h4>
                             </div>
                             <!-- Widget Title End  -->
 
                             <div class="newsletter-content">
-                                <P>Cuteness you exquisite ourselves now end
-                                forfeited. Enquire ye without it garrets himself. Interest our nor received followed was.</P>
+                                <P>Подпишитесь на нашу еженедельную рассылку</P>
 
-                                <form action="https://themelooks.us13.list-manage.com/subscribe/post?u=79f0b132ec25ee223bb41835f&amp;id=f4e0e93d1d" method="post" name="mc-embedded-subscribe-form" target="_blank" class="newsletter-form">
+                                <form action="#" method="post" name="mc-embedded-subscribe-form" target="_blank" class="newsletter-form">
                                     <div class="theme-input-group">
-                                        <input type="text" placeholder="Your Email">
+                                        <input type="text" placeholder="Ваш Email">
                                         <button type="submit"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
                                     </div>
                                 </form>
@@ -1117,16 +1079,10 @@
                         <div class="widget widget_social_icon">
                             <ul class="social_icon_list list-inline">
                                 <li>
-                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.facebook.com/Founders-Business-Bootcamp-2267987336863533/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/founderskg/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                 </li>
                             </ul>
                         </div>
